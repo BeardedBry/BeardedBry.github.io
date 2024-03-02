@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    @font-face { 
+        font-family: "VT323";
+        font-style: normal;
+        font-weight: 400;
+        src: 
+          url(./public/VT323/VT323-Regular.ttf) format("truetype");
+    }
+    @font-face { 
+        font-family: "CutiveMono";
+        font-style: normal;
+        font-weight: 400;
+        src: 
+          url(./public/Cutive_Mono/CutiveMono-Regular.ttf) format("truetype");
+    }
+}

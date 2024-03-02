@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>Brian Burkard | Web Developer</title>
+</head>
+
+<body class="text-gray-900">
+    <div class="w-full flex">
+
+        <main class="h-full min-h-screen bg-neutral-50 w-full relative">
+            <div class="max-w-screen-sm space-y-12 items-end justify-end absolute right-0 p-12 py-4">
+                <header class="flex justify-between flex-col">
+                    <h1 class="text-7xl font-title">Brian Burkard</h1>
+                    <!-- <h1 class="text-7xl font-title">Burkard</h1> -->
+                </header>
+
+                <div class="font-mono text-xl">
+                    Hi, I am a graphic designer turned web developer who also builds games for fun.
+                    Before this, I was born in the 90’s
+                    and as a teenager websites used to look a little bit more like this one.
+                </div>
+
+                <div class="space-y-3">
+                    <h2 class="font-title text-4xl">Links</h2>
+                    <ul class="list-disc list-inside font-mono text-2xl space-y-3">
+                        <li class="text-gray-900">
+                            <a class="text-brand-link hover:text-brand-link/75 hover:text-3xl transition-all"
+                                href="https://www.linkedin.com/in/bburkard/" target="_blank">LinkedIn</a>
+                        </li>
+                        <li class="text-gray-900">
+                            <a class="text-brand-link hover:text-brand-link/75 hover:text-3xl transition-all"
+                                href="https://github.com/BeardedBry" target="_blank">GitHub</a>
+                        </li>
+                        <li class="text-gray-900">
+                            <a class="text-brand-link hover:text-brand-link/75 hover:text-3xl transition-all"
+                                href="https://beardedbry.itch.io/" target="_blank">Itch.io</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <footer class="text-center w-full">
+                    <p class="font-mono text-xl py-6">© <span id="year"></span> Brian Burkard</p>
+                </footer>
+            </div>
+        </main>
+
+        <div class="w-0 sm:w-2/6 bg-[url('/public/background3.gif')]"></div>
+
+    </div>
+</body>
+
+<script>
+    function onDocumentLoad(callback) {
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', callback);
+        } else {
+            callback();
+        }
+    }
+
+    onDocumentLoad(function () {
+        var yearSpan = document.querySelector('#year');
+        var currentYear = new Date().getFullYear();
+        yearSpan.textContent = currentYear;
+    });
+</script>
+
+</html>
