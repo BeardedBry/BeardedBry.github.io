@@ -14,25 +14,26 @@
         <main class="h-full min-h-screen bg-neutral-50 w-full relative flex">
 
             <div class="hidden md:flex w-full p-4 justify-end">
-                <div class="rounded-full overflow-clip w-36 h-36 aspect-square shadow-lg">
-                    <img 
-                    src="/public/brianburkard.jpeg"
-                    alt="Brian Burkard"
+                <div class="rounded-full overflow-clip w-36 h-36 aspect-square">
+                    <img
+                        src="/public/brianburkard.jpeg"
+                        alt="Brian Burkard"
                         class="w-full h-full object-cover"
                     />
                 </div>
             </div>
 
-            <div class="max-w-screen-sm space-y-12 p-12 py-4">
+            <div class="max-w-screen-sm space-y-12 p-12 py-4 flex flex-col">
                 <header class="flex justify-between flex-col">
                     <h1 class="text-7xl font-title">Brian Burkard</h1>
                     <!-- <h1 class="text-7xl font-title">Burkard</h1> -->
                 </header>
 
-                <div class="font-mono text-xl leading-8">
-                    Hi, I am a graphic designer turned web developer who also builds games for fun.
-                    Before this, I was born in the 90’s
-                    and as a teenager websites used to look a little bit more like this one.
+                <div class="font-mono text-xl leading-7">              
+                    Hello, I'm a graphic designer turned web developer, 
+                    and I've got a penchant for crafting games in my free time. Born in the '90s, 
+                    I came of age in an era when websites bore a striking resemblance to the one you're currently exploring. 
+                    Those were the days when simplicity ruled the digital landscape.
                 </div>
 
                 <div class="space-y-3">
@@ -53,8 +54,11 @@
                     </ul>
                 </div>
 
-                <footer class="text-center w-full">
-                    <p class="font-mono text-xl py-6">© <span id="year"></span> Brian Burkard</p>
+                <footer class="text-center w-full self-end h-full flex flex-col items-end justify-center">
+                    <div class="mx-auto">
+                        <img src="/gifs/Bgoku.gif" alt="Goku"/>
+                    </div>
+                    <p class="font-mono text-xl py-6 w-full">© <span id="year"></span> Brian Burkard</p>
                 </footer>
             </div>
         </main>

@@ -5,7 +5,8 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          link: "#0075F2",
+          link: "#0000FF",
+          modernLink: "#0075F2",
         }
       },
       fontFamily: {
