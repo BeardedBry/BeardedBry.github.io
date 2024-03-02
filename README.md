@@ -1,2 +1,2 @@
 
-[https://beardedbry.github.io/]
+https://beardedbry.github.io/
