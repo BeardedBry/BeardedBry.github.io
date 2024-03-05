@@ -645,6 +645,15 @@ video {
 .mt-2 {
   margin-top: 0.5rem;
 }
+.mb-4 {
+  margin-bottom: 1rem;
+}
+.mb-9 {
+  margin-bottom: 2.25rem;
+}
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
 .box-border {
   box-sizing: border-box;
 }
@@ -752,6 +761,9 @@ video {
 }
 .max-w-screen-sm {
   max-width: 640px;
+}
+.max-w-\[447px\] {
+  max-width: 447px;
 }
 .flex-shrink {
   flex-shrink: 1;
@@ -1164,15 +1176,25 @@ video {
   margin-top: calc(3.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(3.5rem * var(--tw-space-y-reverse));
 }
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
 .space-y-3 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
-.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+.space-y-16 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
-  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+  margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(4rem * var(--tw-space-y-reverse));
+}
+.space-y-20 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(5rem * var(--tw-space-y-reverse));
 }
 .space-y-reverse > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 1;
@@ -1614,10 +1636,6 @@ video {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
-.px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
 .text-left {
   text-align: left;
 }
@@ -1666,10 +1684,6 @@ video {
 .font-title {
   font-family: VT323, monospace;
 }
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -1681,10 +1695,6 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 .font-bold {
   font-weight: 700;
@@ -1744,6 +1754,9 @@ video {
 }
 .leading-7 {
   line-height: 1.75rem;
+}
+.leading-8 {
+  line-height: 2rem;
 }
 .text-\[\#336699\]\/\[\.35\] {
   color: rgb(51 102 153 / .35);
@@ -2074,17 +2087,6 @@ video {
 }
 
 
-.hover\:text-\[1\.6rem\]:hover {
-  font-size: 1.6rem;
-}
-
-
-.hover\:text-2xl:hover {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-
 .hover\:text-\[1\.4rem\]:hover {
   font-size: 1.4rem;
 }
@@ -2097,11 +2099,6 @@ video {
 
 .hover\:text-brand-link\/75:hover {
   color: rgb(0 0 255 / 0.75);
-}
-
-
-.hover\:text-\[1\.4\]:hover {
-  color: 1.4;
 }
 
 
