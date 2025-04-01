@@ -1,0 +1,189 @@
+@import 'tailwindcss';
+@plugin "@tailwindcss/forms";
+@plugin '@tailwindcss/typography';
+@source '../node_modules/pliny';
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Core theme configuration */
+@theme {
+  /* Font families */
+  --font-sans: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+  /* Colors */
+  /* Copied from https://tailwindcss.com/docs/theme#default-theme-variable-reference */
+  --color-primary-50: oklch(96.26% 0.02 298.2);
+  --color-primary-100: oklch(93.52% 0.036 298.01);
+  --color-primary-200: oklch(87.32% 0.071 297.48);
+  --color-primary-300: oklch(81.07% 0.107 296);
+  --color-primary-400: oklch(73.52% 0.153 294.38);
+  --color-primary-500: oklch(68.02% 0.187 293.47);
+  --color-primary-600: oklch(52.61% 0.276 283.85);
+  --color-primary-700: oklch(44.11% 0.277 275.13);
+  --color-primary-800: oklch(32.85% 0.204 276.81);
+  --color-primary-900: oklch(20.6% 0.124 280.41);
+  --color-primary-950: oklch(13.45% 0.076 289.72);
+
+
+  --color-gray-50: oklch(96.39% 0.001 106.42);
+  --color-gray-100: oklch(93.37% 0.001 106.43);
+  --color-gray-200: oklch(84.77% 0.003 106.46);
+  --color-gray-300: oklch(74.64% 0.006 106.54);
+  --color-gray-400: oklch(60.51% 0.007 106.62);
+  --color-gray-500: oklch(29.24% 0.004 106.62);
+  --color-gray-600: oklch(27.2% 0.004 106.64);
+  --color-gray-700: oklch(27.2% 0.004 106.64);
+  --color-gray-800: oklch(21.74% 0.002 106.56);
+  --color-gray-900: oklch(21.74% 0.002 106.56);
+  --color-gray-950: oklch(0% 0 nan);
+
+
+  --color-white-50: oklch(98.89% 0.005 17.25);
+  --color-white-100: oklch(98.89% 0.005 17.25);
+  --color-white-200: oklch(98.89% 0.005 17.25);
+  --color-white-300: oklch(98.89% 0.005 17.25);
+  --color-white-400: oklch(97.79% 0.011 17.34);
+  --color-white-500: oklch(97.35% 0.013 17.38);
+  --color-white-600: oklch(91.08% 0.046 18.03);
+  --color-white-700: oklch(82.66% 0.097 19.33);
+  --color-white-800: oklch(73.46% 0.163 21.86);
+  --color-white-900: oklch(59.03% 0.242 29.23);
+  --color-white-950: oklch(46.95% 0.193 29.23);
+
+  /* Line heights */
+  --line-height-11: 2.75rem;
+  --line-height-12: 3rem;
+  --line-height-13: 3.25rem;
+  --line-height-14: 3.5rem;
+
+  /* Z-index values */
+  --z-60: 60;
+  --z-70: 70;
+  --z-80: 80;
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+
+  a,
+  button {
+    outline-color: var(--color-primary-500);
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid;
+    border-radius: var(--radius-sm);
+    outline-color: var(--color-primary-500);
+  }
+}
+
+@layer utilities {
+  .prose {
+    & a {
+      color: var(--color-primary-500);
+      &:hover {
+        color: var(--color-primary-600);
+      }
+      & code {
+        color: var(--color-primary-400);
+      }
+    }
+    & :where(h1, h2) {
+      font-weight: 700;
+      letter-spacing: var(--tracking-tight);
+    }
+    & h3 {
+      font-weight: 600;
+    }
+    & :where(code):not(pre code) {
+      color: var(--color-indigo-500);
+    }
+  }
+
+  .prose-invert {
+    & a {
+      color: var(--color-primary-500);
+      &:hover {
+        color: var(--color-primary-400);
+      }
+      & code {
+        color: var(--color-primary-400);
+      }
+    }
+    & :where(h1, h2, h3, h4, h5, h6) {
+      color: var(--color-gray-100);
+    }
+  }
+}
+
+.task-list-item::before {
+  @apply hidden;
+}
+
+.task-list-item {
+  @apply list-none;
+}
+
+.footnotes {
+  @apply mt-12 border-t border-gray-200 pt-8 dark:border-gray-700;
+}
+
+.data-footnote-backref {
+  @apply no-underline;
+}
+
+.csl-entry {
+  @apply my-5;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition:
+    background-color 600000s 0s,
+    color 600000s 0s;
+}
+
+.katex-display {
+  overflow: auto hidden;
+}
+
+.content-header-link {
+  opacity: 0;
+  margin-left: -24px;
+  padding-right: 4px;
+}
+
+.content-header:hover .content-header-link,
+.content-header-link:hover {
+  opacity: 1;
+}
+
+.linkicon {
+  display: inline-block;
+  vertical-align: middle;
+}
