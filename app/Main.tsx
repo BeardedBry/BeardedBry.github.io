@@ -14,7 +14,7 @@ export default function Home({ posts }) {
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-300">
             {siteMetadata.description}
           </p>
-          <h1 className="text-2xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-3xl sm:leading-10 md:text-4xl md:leading-10 dark:text-white-400 [text-shadow:_0_0_30px_rgb(var(--tw-color-primary-500))]">
+          <h1 className="dark:text-white-400 text-2xl leading-9 font-extrabold tracking-tight text-gray-900 [text-shadow:_0_0_30px_rgb(var(--tw-color-primary-500))] sm:text-3xl sm:leading-10 md:text-4xl md:leading-10">
             Latest Posts
           </h1>
         </div>
@@ -38,7 +38,7 @@ export default function Home({ posts }) {
                           <h2 className="text-2xl leading-8 font-bold tracking-tight">
                             <Link
                               href={`/blog/${slug}`}
-                              className="text-gray-900 dark:text-white-400"
+                              className="dark:text-white-400 text-gray-900"
                             >
                               {title}
                             </Link>
