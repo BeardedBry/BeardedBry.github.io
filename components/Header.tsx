@@ -6,14 +6,7 @@ import Image from 'next/image'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 import SearchButton from './SearchButton'
-import { Special_Elite } from 'next/font/google'
-
-const special_elite = Special_Elite({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-special-elite',
-  weight: '400',
-})
+import { special_elite } from '@/data/fonts'
 
 const Header = () => {
   let headerClass = 'flex items-center w-full bg-white-400 dark:bg-gray-900 justify-between py-10'
