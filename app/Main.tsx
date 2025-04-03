@@ -21,13 +21,13 @@ export default function Home({
   return (
     <>
       <div className="max-w-full divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="space-y-2 pt-6 pb-8 md:space-y-6">
+        <div className="space-y-2 pt-6 pb-8 md:space-y-14">
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-300">
             {siteMetadata.description}
           </p>
 
           <div className="divide-y divide-gray-200 dark:divide-gray-700">
-            <div className="space-y-2 pt-6 pb-8 md:space-y-5">
+            <div className="space-y-2 pt-6 pb-8 md:space-y-14">
               <h1
                 className={`dark:text-white-400 text-2xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-3xl sm:leading-8 md:text-3xl md:leading-8 ${special_elite.className}`}
               >
@@ -37,7 +37,7 @@ export default function Home({
             {siteMetadata.description}
           </p> */}
             </div>
-            <div className="flex max-w-full flex-wrap justify-baseline gap-6 py-4">
+            <div className="flex max-w-full flex-wrap gap-6 py-4">
               {projects.map((project) => (
                 <div key={project?.title} className="group relative w-[250px] flex-shrink-0">
                   <div className="relative aspect-square w-full overflow-hidden">
@@ -46,14 +46,19 @@ export default function Home({
                       alt={project.title}
                       width={300}
                       height={300}
-                      className="h-full w-full object-cover transition-all duration-300 group-hover:brightness-50 group-hover:grayscale"
+                      className="h-full w-full object-cover object-left transition-all duration-300 group-hover:brightness-30 group-hover:grayscale"
                     />
-                    <div className="absolute inset-0 flex flex-col items-center justify-center p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                      <h3 className="mb-2 text-lg font-bold text-white">{project.title}</h3>
-                      <p className="text-center text-base text-white">
+                    <Link
+                      href={`/projects/${project.slug}`}
+                      className="absolute inset-0 flex flex-col items-center justify-center p-4 px-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                    >
+                      <h3 className="mb-2 text-center text-lg font-bold text-white">
+                        {project.title}
+                      </h3>
+                      <p className="text-justify text-base text-white">
                         {project.description.slice(0, 100)}...
                       </p>
-                    </div>
+                    </Link>
                   </div>
                 </div>
               ))}

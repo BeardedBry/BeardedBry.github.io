@@ -2,7 +2,7 @@
 const siteMetadata = {
   title: 'Web and Game Dev',
   author: 'Brian Burkard',
-  headerTitle: 'Brian Burkard',
+  headerTitle: 'brianburkard.dev',
   description: 'Web development and other things I find interesting',
   language: 'en-us',
   theme: 'dark', // system, dark or light

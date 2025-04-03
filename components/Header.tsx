@@ -1,15 +1,15 @@
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
-import Logo from '@/data/logo.png'
 import Link from './Link'
-import Image from 'next/image'
 import MobileNav from './MobileNav'
-import ThemeSwitch from './ThemeSwitch'
 import SearchButton from './SearchButton'
+import Image from 'next/image'
+import Logo from '@/data/logo.png'
 import { special_elite } from '@/data/fonts'
 
 const Header = () => {
-  let headerClass = 'flex items-center w-full bg-white-400 dark:bg-gray-900 justify-between py-10'
+  let headerClass =
+    'flex items-center w-full bg-white-400 dark:bg-gray-900 justify-between py-14 pb-5'
   if (siteMetadata.stickyNav) {
     headerClass += ' sticky top-0 z-50'
   }
@@ -18,9 +18,9 @@ const Header = () => {
     <header className={headerClass}>
       <Link href="/" aria-label={siteMetadata.headerTitle}>
         <div className="flex items-center justify-between">
-          <div className="dark:text-white-400 mr-3 text-gray-500">
+          {/* <div className="dark:text-white-400 mr-3 text-gray-500">
             <Image src={Logo} alt="Logo" className="h-20 w-20" />
-          </div>
+          </div> */}
           {typeof siteMetadata.headerTitle === 'string' ? (
             <div
               className={`hidden h-6 text-2xl font-semibold sm:block ${special_elite.className}`}
