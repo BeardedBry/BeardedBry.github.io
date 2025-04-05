@@ -15,13 +15,11 @@ const webProjectsData: Project[] = [
     slug: 'youtube-live-music-player',
   },
   {
-    title: 'The Time Machine',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
-    imgSrc: '/static/images/time-machine.jpg',
-    href: '/blog/the-time-machine',
-    slug: 'the-time-machine',
+    title: 'Tailwind Shimmer Generator',
+    description: `A simple web app that generates a shimmer effect for component loading, using Tailwind CSS.`,
+    imgSrc: '/static/images/apps/shimmer.jpg',
+    href: '',
+    slug: 'shimmer-generator',
   },
 ]
 
